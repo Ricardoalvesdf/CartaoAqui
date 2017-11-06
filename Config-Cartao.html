@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ricardo de Moura Alves">
+    <title>Configurar Cartao | Cartao Aqui</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+   
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style type="text/css">
+    #apDiv1 {
+	position: fixed;
+	width: 240px;
+	height: 410px;
+	z-index: 1051;
+	left: 1107px;
+	top: 220px;
+} #box-area-clientes{
+  position: absolute;
+	position:fixed; top:0%; left: 0; right:0%;
+  z-index: 100; /* número máximo é 9999 */
+}#pricing-table {
+    margin: 100px auto;
+    text-align: center;
+    width: 892px; /* total computed width = 222 x 3 + 226 */
+}
+
+#pricing-table .plan {
+    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
+    text-shadow: 0 1px rgba(255,255,255,.8);        
+    background: #fff;      
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    width: 180px; /* plan width = 180 + 20 + 20 + 1 + 1 = 222px */      
+    float: left;
+    position: relative;
+}
+
+#pricing-table #most-popular {
+    z-index: 2;
+    top: -13px;
+    border-width: 3px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
+}
+
+#pricing-table .plan:nth-child(1) {
+    border-radius: 5px 0 0 5px;        
+}
+
+#pricing-table .plan:nth-child(4) {
+    border-radius: 0 5px 5px 0;        
+}
+
+/* --------------- */   
+
+#pricing-table h3 {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 20px;
+    margin: -20px -20px 50px -20px;
+    background-color: #eee;
+    background-image: linear-gradient(#fff, #eee);
+}
+
+#pricing-table #most-popular h3 {
+    background-color: #ddd;
+    background-image: linear-gradient(#eee, #ddd);
+    margin-top: -30px;
+    padding-top: 30px;
+    border-radius: 5px 5px 0 0;         
+}
+
+#pricing-table .plan:nth-child(1) h3 {
+    border-radius: 5px 0 0 0;       
+}
+
+#pricing-table .plan:nth-child(4) h3 {
+    border-radius: 0 5px 0 0;       
+}   
+
+#pricing-table h3 span {
+    display: block;
+    font: bold 25px/100px Georgia, Serif;
+    color: #777;
+    background: #fff;
+    border: 5px solid #fff;
+    height: 100px;
+    width: 100px;
+    margin: 10px auto -65px;
+    border-radius: 100px;
+    box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+/* --------------- */
+
+#pricing-table ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#pricing-table li {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* --------------- */
+    
+#pricing-table .signup {
+    position: relative;
+    padding: 8px 20px;
+    margin: 20px 0 0 0;  
+    color: #fff;
+    font: bold 14px Arial, Helvetica;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;       
+    background-color: #72ce3f;
+    background-image: linear-gradient(#72ce3f, #62bc30);
+    border-radius: 3px;     
+    text-shadow: 0 1px 0 rgba(0,0,0,.3);        
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 2px 0 rgba(0, 0, 0, .7);
+}
+
+#pricing-table .signup:hover {
+    background-color: #62bc30;
+    background-image: linear-gradient(#62bc30, #72ce3f); 
+}
+
+#pricing-table .signup:active, #pricing-table .signup:focus {
+    background: #62bc30;       
+    top: 2px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .7) inset; 
+}
+
+/* --------------- */
+
+.clear:before, .clear:after {
+  content:"";
+  display:table
+}
+
+.clear:after {
+  clear:both
+}
+
+.clear {
+  zoom:1
+}
+    </style>
+<script type = "text/javascript">
+var count = 0;
+function nuevapagina(page) {
+if (count == 0) {  //en linea
+count ++;
+OpenWin = this.open(page,"CtrlWindow","top=80,left=100,screenX=100,screenY=80,width=550,height=460,toolbar=no,menubar=no,location=no, scrollbars=no,resizable=yes");
+}
+
+function closepop() {if (OpenWin != null) OpenWin.close() }
+window.onunload = closepop;
+}
+    </script>
+</head><!--/head-->
+<body>
+	<header id="header"><!--header-->
+		<div><!--header_top-->
+			<div  class=" header_top">
+				  <div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+							    <li><a href="#"><i></i>&nbsp</a></li>
+								<li><a href="#"><i></i>&nbsp</a></li>
+								<li><a href="#"><img src="images/home/fone.fw.png" width="12" height="10">&nbsp;<FONT color="#FFFFFF">+55 61 991050446</FONT></a></li>
+								<li><a href="#"><img src="images/home/email.png" width="12" height="11">&nbsp;&nbsp;<FONT color="#FFFFFF">cartaoaqui@cartaoaqui.com</FONT></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i></i>&nbsp</a></li>
+								<li><a href="#"><i></i>&nbsp</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<header>
+		    <div>
+			      <a href="index.html"><img src="images/home/bgbarra.jpg" alt=""/></a>
+			</div>
+		</header>
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							<div class="btn-group">
+								&nbsp;
+							</div>
+							
+							<div class="btn-group">
+								&nbsp;
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="Conta.html"><i class="fa fa-user"></i> Conta</a></li>
+								<li><a href="Cart.html"><i class="fa fa-star"></i> Lista de Desejos</a></li>
+								<li><a href="Cart.html"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+<section>
+            <div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="index.html">Home</a></li>
+                  <li><a href="Cartao.html">Cartao</a></li>
+				  <li class="active">Configurar</li>
+				</ol>
+			</div>
+</section>
+<div class="features_items">
+		    <div class="well">
+                      <h3><img src="images/home/um.jpg" width="40" height="40">&nbsp;ESCOLHA A FORMA DE CRIAR SEU PRODUTO: CARTÃO DE VISITA</h3>
+            </div>
+            <div class="&nbsp;">&nbsp;</div>
+         </div>
+            <div id="apDiv1" class="breadcrumb">
+                     <h3>Resumo</h3> <br>
+                         Formato: <br>
+                         Impressão: <br>
+                         Cores: <br>
+                         Papel: <br>
+                         Acabamento:<br>
+                         Enobrecimento: <br>
+                         Extras: <br>
+                         Configurações Adicionais<br>
+              <span class="alert-warning">Previsão de entrega:</span>
+
+  </div> 
+     <!-- INICIO DAS OPCOES -->
+                <div class="&nbsp;">&nbsp;</div> 
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">ESCOLHA COMO MONTAR SEU CARTÃO</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+								      <form action="#" method="post">			
+					<div class="col-sm-4"><!--features_items-->
+						
+										<div>
+											<img src="images/home/enviar.fw.png"/>
+										    <div class="brands_products">
+												<h4 class="brands_products  table-hover"><input type = "checkbox" name = "check1" id = "check1" onclick = "nuevapagina('contrato.html')">
+Enviar minha arte</h4>
+											</div>
+										</div>
+					</div>
+					<div class="col-sm-4">
+										<div>
+											<img src="images/home/online.fw.png"/>
+										    <div class="brands_products">
+												<h4 class="brands_products"><input type = "checkbox" name = "check1" id = "check1" onclick = "nuevapagina('contrato.html')">
+Criar On-line</h4>
+											</div>
+										</div>
+					</div>					
+					<div>					
+										<div>
+											<img src="images/home/Cdesinger.fw.png"/>
+										    <div class="brands_products">
+												<h4 class="brands_products"><input type = "checkbox" name = "check1" id = "check1" onclick = "nuevapagina('contrato.html')">
+Contratar Criação</h4>
+											</div>
+										</div>
+			  </div>
+					
+</form>
+								</td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+     <!-- FIM DAS OPCOES -->
+ <div class="&nbsp;">&nbsp;</div>
+      <div align="left">
+         <br>  
+         <h3>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/home/dois.jpg" width="40" height="40">&nbsp;
+            SELECIONE AS OPÇÕES
+         </h3>
+  </div>
+ <div class="&nbsp;">&nbsp;</div> 
+ <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">FORMATO</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                      <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="">
+										<div class="text-center">
+											<img src="images/home/9050.jpg" alt="" />
+											<h4 class="btn-group-lg text-info"> <input name="" type="checkbox" value="" class="check_out"> &nbsp;90 x 50 mm </h4>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/5050.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;50 x 50 mm </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/8555.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;85 x 55 mm </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/8050.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;80 x 50 mm </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/8555.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp; Personalizar </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                                      
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <div class="&nbsp;">&nbsp;</div> 
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">IMPRESSÃO</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td><div class="col-sm-4">
+							<div class="product-image-wrapper">
+							  <div class="text-center">
+										<div class="text-center">
+											<img src="images/home/fbcard-frente.jpg" alt="" />
+											<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp; Frente </h4>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+								  <div class="text-center">
+										<img src="images/home/fbcard-frenteverso.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp; Frente e Verso </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <div class="&nbsp;">&nbsp;</div> 
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">PAPEL</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="text-center">
+										<div class="text-center">
+										  <img src="images/home/240g.jpg" alt="" />
+											<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Offset 240g </h4>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/240gg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Reciclato 240g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Couché Brilho 250g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250fg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Couché Fosco 250g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250fg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp; Couché Brilho 300g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250fg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Couché Fosco 300g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250fg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Couché Brilho 350g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250fg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Couché Fosco 350g </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+    <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+									  <img src="images/home/250fg.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp; Silverprint 330g </h4>
+									</div>
+								</div>
+							</div>
+					  </div>
+  </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <div class="&nbsp;">&nbsp;</div> 
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">ENOBRECIMENTO</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                      <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="text-center">
+										<div class="text-center">
+											<img src="images/home/laminacaofosca.jpg" alt="" />
+											<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Laminação Fosca </h4>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/laminacaobrilho.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Laminação Brilho </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/verniztotal.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Verniz UV Total </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                        <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="text-center">
+										<img src="images/home/soft-touch.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Laminação Soft Touch </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <div class="&nbsp;">&nbsp;</div> 
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">EXTRAS</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+								     <div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div>
+										<div class="text-center">
+											<img src="images/home/laminacaofosca.jpg" alt="" />
+											<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Sem Extras </h4>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="img-responsive text-center">
+										<img src="images/home/verniztotal.jpg" alt="" />
+										<h4 class="btn-group-lg  text-info"> <input name="" type="checkbox" value=""> &nbsp;Laminação Brilho </h4>
+									</div>
+								</div>
+							</div>
+						</div>
+								</td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <!-- INICIO DO CALCULO DO PRAZO E FRETE -->
+        <div class="&nbsp;">&nbsp;</div> 
+        <div>
+         <br>  
+         <h3>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/home/tres.jpg" width="40" height="40">
+            CALCULE O FRETE E A PREVISÃO DE ENTREGA
+         </h3>
+  </div>
+  <div class="&nbsp;">&nbsp;</div>
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/okverde.fw.png" width="81" height="68">FRETE E O PRAZO DE ENTREGA</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+								      <div class="features_items" align="center">
+               <h2>
+                  <input name="" type="radio" value="">
+                  <label> Entrega</label>
+               
+                  <input name="" type="radio" value="">
+                  <label>Retira</label>
+              </h2>
+      </div>
+								</td>
+                           </tr>
+                           <tr>
+                                <td align="center">
+                                     <h3>
+                      Pesquise o CEP
+                      <input type="text" class="btn-info alert">&nbsp;&nbsp;<input name="ok" class="btn-info alert" type="button" value="ok">
+                      <img src="images/home/okverde.jpg" width="81" height="68">
+                  </h3> 
+                                </td>
+                           </tr>
+                           <tr>
+                                 <td align="center">
+								      <div class="features_items" align="center">
+                 <P class="text-info well">
+                       ESCOLHA UM LOCAL PARA RETIRADA! <select class="text-primary col-lg-4">
+                         <option value="br">Brasilia</option>
+                         <option value="sp">Sao paulo</option>
+                         <option value="rj">Rio de janeiro</option>
+                         <option value="ct">Curitiba</option>
+                      </select>
+                     </P>
+         </div>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+         <!-- INICIO DA TABELA DE PRECOS -->
+<section>
+        <div class="well alert-info">
+            <div class="component" align="center">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/home/frete.jpg" width="636" height="45"></div>
+                 <form name="form1" method="post" action="">
+<table class="breadcrumb" width="82%" height="550" cellpadding="15" cellspacing="15">
+   <tr class="">
+    <td colspan="2" align="center" bgcolor="#FFFFFF"><img src="images/home/carro.jpg" width="100" height="75" class="img-responsive"></td>
+    <td width="19%" class="productinfo" align="right">QUANTIDADE, PREVISÃO</td>
+    <td width="21%" class="productinfo" align="left"> DE ENTREGA E VALORES</td>
+    <td width="23%" class="productinfo"></td>
+    <td width="2%" class="productinfo" hidden="yes"></td>
+  </tr>
+  <tr class="btn-primary" align="center">
+    <td width="17%" class="productinfo"><h3>Quantidade</h3></td>
+    <td width="18%" class="productinfo table-hover"><h3>terça-feira</h3><br>07 nov</td>
+    <td class="productinfo  table-hover"><h3>terça-feira</h3><br>07 nov</td>
+    <td class="productinfo  table-hover"><h3>terça-feira</h3><br>07 nov</td>
+    <td class="productinfo  table-hover"><h3>terça-feira</h3><br>07 nov</td>
+  </tr>
+  <tr class="table-hover">
+    <td>100 un</td>
+    <td class="animated">
+      <input type="checkbox" name="check">
+      <label for="checkbox"></label>
+    </td>
+    <td class=" table-hover"><input type="checkbox" id="roundedOne" name="check">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" id="roundedOne" name="check">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" id="roundedOne" name="check">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr class="shipping label-success">
+    <td class="text-info table-hover">250 un</td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr>
+    <td>500 un</td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr class="shipping label-success">
+    <td class="text-info">1.000 un</td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr>
+    <td>2.500 un</td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class=" table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr class="shipping label-success">
+    <td class="text-info table-hover">5.000 un</td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr>
+    <td class="table-hover">10.000 un</td>
+    <td class="table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+  <tr class="shipping label-success">
+    <td class="text-info table-hover">20.000 un</td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+    <td class="text-info table-hover"><input type="checkbox" name="checkbox" id="checkbox">
+      <label for="checkbox"></label></td>
+  </tr>
+</table>
+</form>
+        </div><br><br>
+        <div align="center">
+            <h4>
+                 <img src="images/home/warning-icon-hi (1).png" width="20" height="20">&nbsp;
+                 <span class="text-danger">Atenção! As entregas podem ocorrer entre 09:00 e 22:00. Certifique-se de que haverá alguém para receber seu produto.</span></h4>
+        </div>
+</section>	
+<br><br>
+      <div align="center">
+        <a href="Config-Cartao-EnviarArte.html">
+        <button class="alert btn-info">
+        <span>Continuar</span>
+        </button>
+    </a></div>
+<br><br>
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>cartao</span><font color="#FFFFFF">aqui</font></h2>
+							<p>Atendimento de Segunda a Sexta de 8 as 18 da tarde!</p>
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe1.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Site Seguro</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe2.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Certificado</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe3.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Cartões</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe4.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Pagamentos</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="address">
+							<img src="images/home/map.png" alt="" />
+							<p>Brasilia - DF</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Servicos</h2>
+							<ul class="nav nav-pills nav-stacked">
+							
+								<li><a href="Contato.html">Contato</a></li>
+								<li><a href="Corporativo.html">Venda Corporativa</a></li>
+								<li><a href="Blog.html">Blog</a></li>
+								
+						  </ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>NEWSLETTER</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Seu email Aqui!" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Receba as nossas  <br />atualizações por E-mail...</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2017 CARTÃO AQUI. Direitos Reservados.</p>
+					<p class="pull-right">Design:<span>RMA DIGITAL</span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	
+</body>
+</html>

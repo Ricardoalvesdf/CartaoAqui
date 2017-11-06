@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Ricardo de Moura Alves">
+    <title>Pagamento | Cartao Aqui</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <style type="text/css">
+    #apDiv1 {
+	position: fixed;
+	width: 350px;
+	height: 270px;
+	z-index: 1051;
+	left: 990px;
+	top: 250px;
+} #box-area-clientes{
+  position: absolute;
+	position:fixed; top:0%; left: 0; right:0%;
+  z-index: 100; /* número máximo é 9999 */
+}form .content2 { width:100%; }
+form .content2 .blc2 { position:relative;float:left;width:33.33333%; }
+label2 { display:block; }
+input[type="text"] { display:block; }
+
+</style>
+</head><!--/head-->
+
+<body>
+	<header id="header"><!--header-->
+		<div><!--header_top-->
+			<div  class=" header_top">
+				  <div class="row">
+					<div class="col-sm-6">
+						<div class="contactinfo">
+							<ul class="nav nav-pills">
+							    <li><a href="#"><i></i>&nbsp</a></li>
+								<li><a href="#"><i></i>&nbsp</a></li>
+								<li><a href="#"><img src="images/home/fone.fw.png" width="12" height="10">&nbsp;<FONT color="#FFFFFF">+55 61 991050446</FONT></a></li>
+								<li><a href="#"><img src="images/home/email.png" width="12" height="11">&nbsp;&nbsp;<FONT color="#FFFFFF">cartaoaqui@cartaoaqui.com</FONT></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="social-icons pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i></i>&nbsp</a></li>
+								<li><a href="#"><i></i>&nbsp</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header_top-->
+		<header>
+		    <div>
+			      <a href="index.html"><img src="images/home/bgbarra.jpg" alt="" /></a>
+			</div>
+		</header>
+		<div class="header-middle"><!--header-middle-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="logo pull-left">
+							<a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right">
+							<div class="btn-group">
+								&nbsp;
+							</div>
+							
+							<div class="btn-group">
+								&nbsp;
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8">
+						<div class="shop-menu pull-right">
+							<ul class="nav navbar-nav">
+								<li><a href="Conta.html"><i class="fa fa-user"></i> Conta</a></li>
+								<li><a href="Cart.html"><i class="fa fa-star"></i> Lista de Desejos</a></li>
+								<li><a href="Cart.html"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
+								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                                
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-middle-->
+	
+		<div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-9">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+								<span class="sr-only">...</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="mainmenu pull-left">
+							<ul class="nav navbar-nav collapse navbar-collapse">
+								<li><a href="index.html" class="active">Home</a></li>
+								<li class="dropdown"><a href="Produtos.html">Produtos<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="Cartao.html">Cartao de visita</a></li>
+							        </ul>
+                                </li> 
+								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="blog.html">Acessar Blog </a></li>
+										
+                                    </ul>
+                                </li> 
+								<li><a href="Corporativo.html">Venda Corporativa</a></li>
+								<li><a href="Contato.html">Contato</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="search_box pull-right">
+							<input type="text" placeholder="Pesquisar"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/header-bottom-->
+	</header><!--/header-->
+	<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+				<ol class="breadcrumb">
+				  <li><a href="index.html">Home</a></li>
+				  <li class="active">Finalizar compra</li>
+				</ol>
+			</div>
+      <div id="apDiv1" class="breadcrumb">
+                     <h2 class="text-center text-success">Resumo</h2>(1 item)<br>
+                         Total: <br>
+                         <span class="text-success">R$ 62,99</span><br><br><br>
+             
+  </div> 
+		 <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/um.jpg" width="40" height="40">&nbsp;&nbsp;Dados</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                      <fieldset class="text-info"><br>
+  <h2 class="title text-center">Dados Pessoais</h2>
+  <div class="well col-lg-6">
+    <p class="text-primary text-center"><input type="radio" id="nome" name="nome">&nbsp;Pessoa Fisica</p>
+  </div> 
+  <div class="well col-lg-6"> 
+    <p class="text-primary text-center"><input type="radio" id="nome" name="nome">&nbsp;Pessoa Juridica</p>
+  </div>
+  <div class="form-group">
+    
+    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo">
+  </div>
+
+  <div class="form-group">
+    
+    <input type="Fone" class="form-control" id="Telefone" name="Telefone" placeholder="Telefone">  
+  </div>
+  <div class="form-group text-primary">
+        <select class=" well col-lg-6" name="Sexo" title="Sexo">
+                                       <option value="M">Masculino</option>
+                                       <option value="F">Feminino</option>
+                               </select>
+                               <select class=" well col-lg-6">
+                                       <option>Academia</option>
+                                       <option>Arquitetura</option>
+									   <option>Comunicação e Marketing</option>
+									   <option>Consultoria</option>
+									   <option>Designer / Fotografia</option>
+									   <option>Engenharia</option>
+									   <option>Estetica</option>
+									   <option>Fisioterapia</option>
+									   <option>Imobiliaria</option>
+									   <option>Informatica</option>
+									   <option>Medicina</option>
+									   <option>Odontologia</option>
+									   <option>Veterinaria / Pet</option>
+									   <option>Outros</option>
+									   
+                               </select>
+  </div>
+  <div class="form-group">
+    
+    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF ou CNPJ">
+  </div>
+
+  <div class="checkbox" align="center">
+    <button class="btn btn-primary text-center">
+        CONFIRMAR
+      </button>
+  </div>
+</fieldset>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <div class="&nbsp;">&nbsp;</div>     
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/dois.jpg" width="40" height="40">&nbsp;&nbsp;Selecione o Endereço</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                      <fieldset class="text-info"><br>
+  <h2 class="title text-center">Endereço de Entrega</h2>
+  <form class="addressForm" name="addressForm">
+        <div class="form-group">
+              <input type="text" class="form-control" placeholder="NOME" style="width:360px;font-size: 13px; float:left;">
+         </div>
+         <div class="form-group">
+           
+           <input type="text" class="form-control" placeholder="CEP" style="width:360px;font-size: 13px; float:none;">
+         </div>
+         <div class="form-group">
+           <input type="text" class="form-control" placeholder="ENDEREÇO" style="width:700px;font-size: 13px; float:none;">
+         </div>
+         <div class="checkbox" align="center">
+                   <button class="btn btn-primary text-center">
+                          SALVAR ENDEREÇO
+                   </button>
+          </div>
+     </form>
+
+</fieldset>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>	 
+    	</div>
+        <div class="&nbsp;">&nbsp;</div>     
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/tres.jpg" width="40" height="40">&nbsp;&nbsp;Selecione a forma de pagamento</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                      <fieldset class="text-info"><br>
+  <form class="addressForm" name="addressForm">
+        <div class="form-group" align="center">
+           &nbsp;&nbsp;<button class="btn-xs well add-to-cart alert-success"><h2>Cartao de Credito&nbsp;&nbsp;<i class="fa fa-credit-card"></i></h2></button>
+           &nbsp;&nbsp;<button class="btn-xs well alert-info add-to-cart"><h2>Boleto Bancario&nbsp;&nbsp;<i class="fa fa-bars"></i></h2></button>
+         </div>
+        <div class="form-group" align="center">
+           <h3>CARTÃO DE CRÉDITO</h3>
+         </div>
+         <div class="form-group">
+           <table width="100%" border="0" cellspacing="6" cellpadding="0">
+  <tr>
+    <td><img src="images/home/cartao.fw.png" width="304" height="186"></td>
+    <td>
+           
+           <input type="text" class="form-control" placeholder="N° do Cartão">
+           <br>
+           <input type="text" class="form-control" placeholder="Nome">
+           <br>
+           <input type="text" class="form-control content2" placeholder="Mês" style="width:85px;font-size: 13px; float:left;">
+           
+           <input type="text" class="form-control  content2" placeholder="Ano" style="width:90px;font-size: 13px; float:left;">
+           
+           <input type="text" class="form-control  content2" placeholder="COD CCV" style="width:100px;font-size: 13px; float:none">
+            
+        </td>
+    <td>&nbsp;
+           
+   </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td class="social-icons pull-right">
+             <label>
+                   <input type="checkbox" value="sim" name="spam" checked>
+                      Salvar Cartão
+             </label>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+         </div>
+         <div class="checkbox" align="center">
+                   <button class="btn btn-primary text-center">
+                          FINALIZAR COMPRA
+                   </button>
+          </div>
+     </form>
+
+</fieldset>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>	
+        <div class="&nbsp;">&nbsp;</div>     
+        <div id="contact-page" class="container">    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+    				  <table width="100%" border="0" cellspacing="6" cellpadding="0" class="header-bottom table-bordered table-condensed">
+                            <tr>
+                                 <td class="text-success"><h3 class="text-info"><img src="images/home/tres.jpg" width="40" height="40">&nbsp;&nbsp;Selecione a forma de pagamento</h3>
+                                 </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                      <fieldset class="text-info"><br>
+  <form class="addressForm" name="addressForm">
+        <div class="form-group" align="center">
+           &nbsp;&nbsp;<button class="btn-xs well add-to-cart"><h2>Cartao de Credito&nbsp;&nbsp;<i class="fa fa-credit-card"></i></h2></button>
+           &nbsp;&nbsp;<button class="btn-xs well alert-info add-to-cart"><h2>Boleto Bancario&nbsp;&nbsp;<i class="fa fa-bars"></i></h2></button>
+         </div>
+        <div class="form-group" align="center">
+           <h3>BOLETO BANCARIO</h3>
+         </div>
+         <div class="btn-warning">
+           <i class="fa fa-cog">&nbsp;&nbsp;O pagamento do boleto pode demorar até dois dias úteis para ser processado, e por este motivo o prazo de entrega pode ser alterado. Caso não queira este possível atraso, efetue o pagamento com cartão de crédito.</i>
+         </div>
+         <div class="&nbsp;">&nbsp;</div>
+         <div class="form-group">
+           <table width="100%" border="0" cellspacing="6" cellpadding="0">
+  <tr>
+      <td><h4 class="cart_quantity_input"><I class="fa fa-calendar"></I>&nbsp;Escolha uma data para o vencimento do seu boleto</h4>
+      </td>
+    <td>&nbsp;
+          
+    </td>
+    <td>&nbsp;
+           
+   </td>
+  </tr>
+  <tr>
+    <td><select class=" well col-lg-6">
+                                       <option>xxxxxx</option>
+                                       <option>xxxxxxx</option>
+									   <option>xxxxxxx</option>
+									   <option>xxxxxxx</option>
+									   <option>xxxxxxxx</option>
+			 </select>
+          </td>
+    <td class="social-icons pull-right">
+             
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+         <h4 class="cart_quantity_input"><I class="fa fa-print"></I>&nbsp;Imprima o boleto e pague no banco ou caixa eletrônico</h4> 
+    </td>
+    <td class="">
+             
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+   <tr>
+    <td>
+         <h4 class="cart_quantity_input"><I class="fa fa-print"></I>&nbsp;Ou Pague pela internet utilizando o código de barras do boleto</h4> 
+    </td>
+    <td class="">
+             
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+         </div>
+         <div class="checkbox" align="center">
+                   <button class="btn btn-primary text-center">
+                          FINALIZAR COMPRA
+                   </button>
+          </div>
+     </form>
+
+</fieldset>
+                                </td>
+                           </tr>
+                     </table>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+	</section>
+    <br><br>
+	<footer id="footer"><!--Footer-->
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="companyinfo">
+							<h2><span>cartao</span><font color="#FFFFFF">aqui</font></h2>
+							<p>Atendimento de Segunda a Sexta de 8 as 18 da tarde!</p>
+						</div>
+					</div>
+					<div class="col-sm-7">
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe1.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Site Seguro</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe2.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Certificado</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe3.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Cartões</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+						
+						<div class="col-sm-3">
+							<div class="video-gallery text-center">
+								<a href="#">
+									<div class="iframe-img">
+										<img src="images/home/iframe4.png" alt="" />
+									</div>
+									<div class="overlay-icon">
+										<i class="fa fa-play-circle-o"></i>
+									</div>
+								</a>
+								<p>Pagamentos</p>
+								<h2>&nbsp </h2>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="address">
+							<img src="images/home/map.png" alt="" />
+							<p>Brasilia - DF</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Servicos</h2>
+							<ul class="nav nav-pills nav-stacked">
+								
+								<li><a href="Contato.html">Contato</a></li>
+								<li><a href="Corporativo.html">Venda Corporativa</a></li>
+								<li><a href="Blog.html">Blog</a></li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>NEWSLETTER</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Seu email Aqui!" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Receba as nossas  <br />atualizações por E-mail...</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright © 2017 CARTÃO AQUI. Direitos Reservados.</p>
+					<p class="pull-right">Design:<span>RMA DIGITAL</span></p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
